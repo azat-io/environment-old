@@ -1,0 +1,17 @@
+[user]
+    name = Azat S.
+    email = to@azat.io
+
+[color]
+    diff   = auto
+    status = auto
+    branch = auto
+
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+
+[color "branch"]
+    remote = yellow bold
+
