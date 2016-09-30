@@ -8,51 +8,96 @@ set ic
 set nobackup
 set noundofile
 
+"Highlighting search & incremental search
+
+set hlsearch
+set incsearch
+
 set autoindent
 set smartindent
+set expandtab
+set tabstop=4
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'L9'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'honza/vim-snippets'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-scripts/tComment'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
-Plugin 'ahmedelgabri/vim-ava-snippets'
-Plugin 'vim-scripts/FuzzyFinder'
-Plugin 'dracula/vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'isRuslan/vim-es6'
-Plugin 'othree/yajs.vim'
-Plugin 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
+" NERDTree
 
-syntax enable
-syntax on
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+nmap <leader>nt :NERDTreeFind<CR>
 
+let NERDTreeShowBookmarks=0
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=0
+let NERDTreeShowHidden=0
+let NERDTreeKeepTreeInNewTab=1
+let NERDTreeShowHidden=1
+
+let mapleader=","
+nmap <C-\> :NERDTreeFind<CR>
+nmap <silent> <leader><leader> :NERDTreeToggle<CR>
+
+" Spacing between windows
+
+map silent <C-h> :call WinMove('h')<CR>
+map silent <C-j> :call WinMove('j')<CR>
+map silent <C-k> :call WinMove('k')<CR>
+map silent <C-l> :call WinMove('l')<CR>
+
+function! WinMove(key)
+  let t:curwin = winnr()
+  exec "wincmd ".a:key
+  if (t:curwin == winnr())
+    if (match(a:key,'[jk]'))
+      wincmd v
+    else
+      wincmd s
+    endif
+    exec "wincmd".a:key
+  endif
+endfunction
+
+" Autocompletition
+
+Plug 'Valloric/YouCompleteMe'
+Plug 'jiangmiao/auto-pairs'
+
+" Fast navigation between files
+
+Plug 'kien/ctrlp.vim'
+set wildignore+=*/node_modules/*
+
+" Git
+
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Pug && Jade
+
+Plug 'digitaltoad/vim-pug', { 'for': ['pug', 'jade'] }
 autocmd BufNewFile,BufRead *.pug set filetype=pug
 autocmd BufNewFile,BufRead *.jade set filetype=jade
 
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_ngdoc = 1
-let g:javascript_plugin_flow = 1
-set foldmethod=syntax
+" HTML
 
-set keymap=russian-jcukenwin
-set iminsert=0
-set imsearch=0
-highlight lCursor guifg=NONE guibg=Cyan
+Plug 'othree/html5.vim', { 'for': 'html' }
 
-call vundle#end()
-filetype plugin indent on
+" CSS
 
-color dracula
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
+Plug 'groenewege/vim-less', { 'for': 'less' }
+Plug 'wavded/vim-stylus', { 'for': 'styl' }
 
+" JavaScript
 
+Plug 'othree/yajs.vim', { 'for': ['js', 'es6'] }
+Plug 'mxw/vim-jsx', { 'for': 'jsx' }
+
+" Markdown
+
+Plug 'plasticboy/vim-markdown', { 'for': 'md' }
+
+call plug#end()
+
+syntax enable
