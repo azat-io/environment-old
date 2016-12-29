@@ -21,8 +21,8 @@
     aa = "!git add . && git status"
     cm = commit -m
     st = status
-    pl = "!git pull origin $(git current-branch)"
-    ph = "!git push origin $(git current-branch)"
+    pl = pull origin HEAD
+    ph = push origin HEAD
     rh = reset --hard
     lg = log --color --graph --pretty=format:'%C(yellow bold)%h%C(reset) -%C(yellow)%d%C(7) %s %C(green bold)(%cr) %C(white bold)[%an]%Creset' --abbrev-commit
 
