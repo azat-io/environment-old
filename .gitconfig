@@ -17,10 +17,14 @@
     current = green bold
     remote = yellow bold
 
+[diff]
+    compactionHeuristic = true
+
 [alias]
     aa = "!git add . && git status"
     cm = commit -m
     st = status
+    df = diff --color --color-words --abbrev
     pl = pull origin HEAD
     ph = push origin HEAD
     rh = reset --hard
