@@ -25,7 +25,7 @@
     am = commit --amend --no-edit
     cm = commit -m
     df = diff --color --color-words --abbrev
-    it = "!git init && git commit -m “Root” --allow-empty"
+    it = "!git init && git commit -m \"Root\" --allow-empty"
     lg = log --color --graph --pretty=format:'%C(yellow bold)%h%C(reset) -%C(yellow)%d%C(7) %s %C(green bold)(%cr) %C(white bold)[%an]%Creset' --abbrev-commit
     pl = pull origin HEAD
     ph = push origin HEAD
