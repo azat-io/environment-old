@@ -22,6 +22,7 @@ packages=(
     'linter'
     'open-in-browser'
     'open-in-github-app'
+    'regex-railroad-diagram'
     'sort-lines'
     'turbo-javascript'
 )
