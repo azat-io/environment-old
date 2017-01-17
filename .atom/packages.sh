@@ -3,6 +3,7 @@
 packages=(
     'atom-beautify'
     'atom-material-ui'
+    'atom-ternjs'
     'auto-update-packages'
     'autoclose-html'
     'autocomplete-modules'
@@ -11,6 +12,7 @@ packages=(
     'editorconfig'
     'emmet'
     'file-icons'
+    'font-viewer'
     'gruvbox'
     'javascript-snippets'
     'language-babel'
@@ -22,6 +24,7 @@ packages=(
     'linter'
     'open-in-browser'
     'open-in-github-app'
+    'open-recent'
     'regex-railroad-diagram'
     'sort-lines'
     'turbo-javascript'
