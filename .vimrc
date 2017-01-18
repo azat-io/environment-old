@@ -1,42 +1,41 @@
-set number
-set noswapfile
+"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄   
+"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄ 
+"  ███    ███ ███▌ ███   ███   ███ 
+"  ███    ███ ███▌ ███   ███   ███ 
+"  ███    ███ ███▌ ███   ███   ███ 
+"  ███    ███ ███  ███   ███   ███ 
+"  ███    ███ ███  ███   ███   ███ 
+"   ▀██████▀  █▀    ▀█   ███   █▀  
+"
+" Author: Azat S.
+" Twitter: @azat_io
+" Source: https://github.com/azat-io/enviorenment
 
-set nocompatible
-filetype off
-set ic
+" ==========================================
+" General Settings
+" ==========================================
 
-set nobackup
-set noundofile
+" Base
 
-"Highlighting search & incremental search
+set number                              " show line numbers
+set nocompatible                        " vim is not vi
 
-set hlsearch
-set incsearch
+syntax on                               " syntax highlighting
+set showmatch                           " highlight the matching bracket 
 
-set autoindent
-set smartindent
-set expandtab
-set tabstop=4
+set nobackup                            " don't save backups
+set noswapfile                          " disabling creation .swp files
+
+" Search
+
+set ic                                  " insensitive search
+set hlsearch                            " highlight search matches
+set incsearch                           " find as you type search
+set smartcase                           " case sensitive search if not all lowercase
 
 call plug#begin('~/.vim/plugged')
 
-" NERDTree
-
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-nmap <leader>nt :NERDTreeFind<CR>
-
-let NERDTreeShowBookmarks=0
-let NERDTreeChDirMode=0
-let NERDTreeQuitOnOpen=0
-let NERDTreeShowHidden=0
-let NERDTreeKeepTreeInNewTab=1
-let NERDTreeShowHidden=1
-
-let mapleader=","
-nmap <C-\> :NERDTreeFind<CR>
-nmap <silent> <leader><leader> :NERDTreeToggle<CR>
-
-" Spacing between windows
+" Spacing between windows using Ctrl + \"hjkl\"
 
 map silent <C-h> :call WinMove('h')<CR>
 map silent <C-j> :call WinMove('j')<CR>
@@ -44,60 +43,34 @@ map silent <C-k> :call WinMove('k')<CR>
 map silent <C-l> :call WinMove('l')<CR>
 
 function! WinMove(key)
-  let t:curwin = winnr()
-  exec "wincmd ".a:key
-  if (t:curwin == winnr())
-    if (match(a:key,'[jk]'))
-      wincmd v
-    else
-      wincmd s
+    let t:curwin = winnr()
+    exec "wincmd ".a:key
+    if (t:curwin == winnr())
+        if (match(a:key,'[jk]'))
+            wincmd v
+        else
+            wincmd s
+        endif
+        exec "wincmd".a:key
     endif
-    exec "wincmd".a:key
-  endif
 endfunction
 
-" Autocompletition
+" Syntax theme
 
-Plug 'Valloric/YouCompleteMe'
-Plug 'jiangmiao/auto-pairs'
+set t_Co=256
+highlight Normal guibg=black guifg=white
+set background=dark
 
-" Fast navigation between files
+Plug 'morhetz/gruvbox'
+colorscheme gruvbox
 
-Plug 'kien/ctrlp.vim'
-set wildignore+=*/node_modules/*
+" Including other VIM configuration files
 
-" Git
-
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Pug && Jade
-
-Plug 'digitaltoad/vim-pug', { 'for': ['pug', 'jade'] }
-autocmd BufNewFile,BufRead *.pug set filetype=pug
-autocmd BufNewFile,BufRead *.jade set filetype=jade
-
-" HTML
-
-Plug 'othree/html5.vim', { 'for': 'html' }
-
-" CSS
-
-Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
-Plug 'groenewege/vim-less', { 'for': 'less' }
-Plug 'wavded/vim-stylus', { 'for': 'styl' }
-
-" JavaScript
-
-Plug 'othree/yajs.vim', { 'for': ['js', 'es6'] }
-Plug 'mxw/vim-jsx', { 'for': 'jsx' }
-
-" Markdown
-
-Plug 'plasticboy/vim-markdown', { 'for': 'md' }
+for f in glob('.vim/*.vim', 0, 1)
+    execute 'source' f
+endfor
 
 call plug#end()
 
 syntax enable
+
