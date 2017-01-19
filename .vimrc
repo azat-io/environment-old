@@ -1,11 +1,11 @@
-"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄   
-"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄ 
-"  ███    ███ ███▌ ███   ███   ███ 
-"  ███    ███ ███▌ ███   ███   ███ 
-"  ███    ███ ███▌ ███   ███   ███ 
-"  ███    ███ ███  ███   ███   ███ 
-"  ███    ███ ███  ███   ███   ███ 
-"   ▀██████▀  █▀    ▀█   ███   █▀  
+"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄
+"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄
+"  ███    ███ ███▌ ███   ███   ███
+"  ███    ███ ███▌ ███   ███   ███
+"  ███    ███ ███▌ ███   ███   ███
+"  ███    ███ ███  ███   ███   ███
+"  ███    ███ ███  ███   ███   ███
+"   ▀██████▀  █▀    ▀█   ███   █▀
 "
 " Author: Azat S.
 " Twitter: @azat_io
@@ -21,7 +21,7 @@ set number                              " show line numbers
 set nocompatible                        " vim is not vi
 
 syntax on                               " syntax highlighting
-set showmatch                           " highlight the matching bracket 
+set showmatch                           " highlight the matching bracket
 
 set nobackup                            " don't save backups
 set noswapfile                          " disabling creation .swp files
@@ -66,7 +66,7 @@ colorscheme gruvbox
 
 " Including other VIM configuration files
 
-for f in glob('.vim/*.vim', 0, 1)
+for f in glob('~/.vim/*.vim', 0, 1)
     execute 'source' f
 endfor
 
