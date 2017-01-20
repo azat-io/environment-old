@@ -21,7 +21,7 @@ Plug 'wavded/vim-stylus', { 'for': 'styl' }
 
 " Scripts
 
-Plug 'othree/yajs.vim', { 'for': ['js', 'es6'] }
+Plug 'othree/yajs.vim', { 'for': 'javascript' }
 
 " Other
 
