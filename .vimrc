@@ -9,7 +9,7 @@
 "
 " Author: Azat S.
 " Twitter: @azat_io
-" Source: https://github.com/azat-io/enviorenment
+" Source: https://github.com/azat-io/environment
 
 " ==========================================
 " General Settings
