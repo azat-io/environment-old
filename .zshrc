@@ -33,6 +33,11 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Aliases
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
 alias d="cd ~/Dev/"
 alias e="vim"
 

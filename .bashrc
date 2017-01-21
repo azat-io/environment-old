@@ -1,9 +1,9 @@
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
-# Easier navigation
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~"
+if [ -f /usr/lib/python3.4/site-packages/powerline/bindings/bash/powerline.sh ]; then
+    source /usr/lib/python3.4/site-packages/powerline/bindings/bash/powerline.sh
+fi
+
