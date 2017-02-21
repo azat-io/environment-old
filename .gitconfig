@@ -31,3 +31,4 @@
     ph = push origin HEAD
     rh = reset --hard
     st = status
+    un = reset --soft HEAD^
