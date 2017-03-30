@@ -1,0 +1,47 @@
+snippet f
+	function ${1:functionName} (${2:args}) {
+	    ${3:code}
+	}
+
+snippet for
+	for (let i = 0, max = ${1:arr}.length; i < max; i++) {
+	    ${2:code}
+	}
+
+snippet fe
+	${1:arr}.forEach(i => {
+	    ${2:code}
+	})
+
+snippet im
+	import ${1:variable} from '${2:package}'
+
+snippet log
+	console.log(${1:code})
+
+snippet map
+	${1:arr}.map(i => {
+	    ${2:code}
+	})
+
+snippet r
+	return ${1:code}
+
+snippet rc
+	import React, { Component } from 'react'
+
+	export default class ${1:ComponentName} extends Component {
+	    render () {
+	        return (
+	            <${2:div}>
+	                <${3:code}>
+	            </$2>
+	        )
+	    }
+	}
+
+snippet req
+	const ${1:variable} = require('${2:package}')
+
+snippet us
+	'use strict'

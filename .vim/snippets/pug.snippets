@@ -1,0 +1,87 @@
+snippet a
+	a(class='${1:classname}' href='${2:link}') ${3:content}
+
+snippet button
+	button(class='${1:classname}')
+
+snippet footer
+	footer(class='${1:footer}')
+
+snippet form
+	form(class='${1:classname}')
+
+snippet div
+	div(class='${1:classname}')
+
+snippet h1
+	h1(class='${1:classname}')
+
+snippet h2
+	h2(class='${1:classname}')
+
+snippet h3
+	h3(class='${1:classname}')
+
+snippet h4
+	h4(class='${1:classname}')
+
+snippet h5
+	h5(class='${1:classname}')
+
+snippet h6
+	h6(class='${1:classname}')
+
+snippet head
+	- const title = '${1:Title}'
+	- const description = '${2:Description}'
+	- const socialImage = '${3:images/social.png}'
+	- const url = 'http://${4:azat.io}/'
+
+	head
+	    meta(charset='utf-8')
+	    meta(name='viewport', content='width=device-width')
+	    title=`${ title }`
+	    meta(name='description', content=`${ description }`)
+	    meta(name='theme-color' content='#000')
+
+	    meta(property='og:title' content=`${ title }`)
+	    meta(property='og:description' content=`${ description }`)
+	    meta(property='og:image' content=`${ socialImage }`)
+
+	    meta(name='twitter:card' content='summary')
+	    meta(name='twitter:url' content=`${ url }`)
+	    meta(name='twitter:title' content=`${ title }`)
+	    meta(name='twitter:description' content=`${ description }`)
+	    meta(name='twitter:image' content=`${ socialImage }`)
+
+	    mixin favicon(id, ...sizes)
+	        each size in sizes
+	            link(rel=id type='image/png' href='assets/favicon-' + size + '.png' sizes=size)
+
+	    +favicon('icon', '16x16', '32x32', '96x96', '230x230')
+
+	    mixin apple-touch-icon(id, ...sizes)
+	        each size in sizes
+	            link(rel=id sizes=size href='assets/apple-touch-icon-' + size + '.png')
+
+	    link(rel='apple-touch-icon' href='assets/apple-touch-icon.png')
+	    +apple-touch-icon('apple-touch-icon', '57x57', '60x60', '72x72', '76x76',
+	        '114x144', '120x120', '144x144', '152x152', '167x167', '180x180')
+
+	    link(rel='stylesheet' href='/css/style.css')
+
+snippet header
+	header(class='${1:header}')
+
+snippet input
+	input(class='${1:classname}' name='${2:name}' type='${3:text}' placeholder='${4:Name}' ${5:required})
+
+snippet img
+	img(class='${1:classname}' src='${2:link}' alt='${3:alt}')
+
+snippet p
+	p(class='${1:classname}')
+
+snippet section
+	section(class='${1:classname}')
+

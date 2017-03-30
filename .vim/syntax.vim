@@ -8,21 +8,25 @@ Plug 'othree/html5.vim', { 'for': 'html' }
 
 Plug 'digitaltoad/vim-pug', { 'for': ['pug', 'jade'] }
 autocmd bufnewfile,bufread *.pug set filetype=pug
-autocmd bufnewfile,bufread *.jade set filetype=jade
+autocmd bufnewfile,bufread *.jade set filetype=pug
 
 Plug 'plasticboy/vim-markdown', { 'for': 'md' }
 
 " Stylesheets
 
-Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
-Plug 'stephenway/postcss.vim', { 'for': 'css' }
-
-Plug 'wavded/vim-stylus', { 'for': 'styl' }
+Plug 'hail2u/vim-css3-syntax'
+Plug 'wavded/vim-stylus'
 
 " Scripts
 
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'fleischie/vim-styled-components', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
-" Other
+let g:javascript_plugin_jsdoc = 1
+let g:used_javascript_libs = 'react,vue,underscore,jasmine'
 
-Plug 'posva/vim-vue', { 'for': 'vue' }
+" CoffeeScript
+
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
