@@ -46,7 +46,9 @@ endif
 " Plugin: NERDTree
 "
 " About: Allow to explore the filesystem and open files and directory
-" Usage: To open or close NERDTree press twice Leader key (,)
+" Usage: To open or close NERDTree press twice Leader key (,). To open file or
+" directory press o, to close parent of node press x, to open split press i,
+" to open vsplit press s
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 nmap <leader>nt :NERDTreeFind<CR>
