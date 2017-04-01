@@ -30,3 +30,7 @@ let g:used_javascript_libs = 'react,vue,underscore,jasmine'
 " CoffeeScript
 
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+
+" YAML
+
+Plug 'stephpy/vim-yaml'
