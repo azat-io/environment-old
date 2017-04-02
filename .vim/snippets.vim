@@ -145,3 +145,23 @@ Plug 'tomtom/tlib_vim'
 let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['javascript'] = 'javascript,jsx,es6'
+
+" ------------------------------------------------------------------------------
+
+" Plugin: CloseTag
+"
+" About: Autoclosing HTML tags
+" Usage: Works automatically
+
+Plug 'alvan/vim-closetag'
+
+" ------------------------------------------------------------------------------
+
+" Plugin: TextObj Entire
+"
+" About: Provide to using text objects for entire buffer
+" Usage: Provides two text object: ae - entire content of the current buffer,
+" ie - the same as ae but without including leading and trailing empty lines.
+" For example dae - remove all buffer content
+
+Plug 'kana/vim-textobj-entire'

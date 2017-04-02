@@ -147,7 +147,7 @@ autocmd FileType css call SetupLinter('stylelint')
 "
 " About: Zoom in/out of windows
 " Usage: Press Ctrl + w, o and the current window zooms into a full screen, and
-"        press Ctrl + w, o again to the previous set of windows is restored 
+"        press Ctrl + w, o again to the previous set of windows is restored
 
 Plug 'vim-scripts/ZoomWin'
 
@@ -169,7 +169,7 @@ Plug 'simeji/winresizer'
 
 Plug 'Shougo/vimproc.vim'
 Plug 'Shougo/vimshell.vim'
- 
+
 " ------------------------------------------------------------------------------
 
 " Plugin: Match tag Always

@@ -15,21 +15,22 @@ Plug 'plasticboy/vim-markdown', { 'for': 'md' }
 " Stylesheets
 
 Plug 'hail2u/vim-css3-syntax'
-Plug 'wavded/vim-stylus'
+Plug 'hhsnopek/vim-sugarss'
 
 " Scripts
 
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'fleischie/vim-styled-components', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-
-let g:javascript_plugin_jsdoc = 1
-let g:used_javascript_libs = 'react,vue,underscore,jasmine'
 
 " CoffeeScript
 
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+au BufRead,BufNewFile *.cson set filetype=coffee
+
+" TypeScript
+
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 " YAML
 
