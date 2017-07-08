@@ -15,6 +15,11 @@ Plug 'morhetz/gruvbox'
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 
+highlight! link jsonKeyword GruvboxAqua
+highlight! link jsonQuote GruvboxAqua
+highlight! link jsonBraces GruvboxYellow
+highlight! link jsonString GruvboxYellow
+
 " ------------------------------------------------------------------------------
 
 " Plugin: AirLine
@@ -91,55 +96,28 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " ------------------------------------------------------------------------------
 
-" Plugin: Syntastic
+" Plugin: ALE
 "
 " About: Syntax checking for JavaScript (ESLint) and CSS (Stylelint)
-" Usage: Works automatically
+" Usage: Works automatically. Press Ctrl + z or Ctrl + x for quick navigation
+"        between errors
 
+Plug 'w0rp/ale'
 
-Plug 'vim-syntastic/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
 
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
-let g:syntastic_auto_loc_list=1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+nmap <silent> <C-z> <Plug>(ale_previous_wrap)
+nmap <silent> <C-x> <Plug>(ale_next_wrap)
 
-function! FindConfig(prefix, what, where)
-    let cfg = findfile(a:what, escape(a:where, ' ') . ';')
-    return cfg !=# '' ? ' ' . a:prefix . ' ' . shellescape(cfg) : ''
-endfunction
-
-let g:syntastic_javascript_checkers = []
-let g:syntastic_css_checkers = []
-let g:syntastic_javascript_flow_exe = 'flow'
-
-function! CheckLinter(filepath, linter)
-    if exists('b:syntastic_checkers')
-        return
-    endif
-    if filereadable(a:filepath)
-        let b:syntastic_checkers = [a:linter]
-        let {'b:syntastic_' . a:linter . '_exec'} = a:filepath
-    endif
-endfunction
-
-function! SetupLinter(linter)
-    let l:current_folder = expand('%:p:h')
-    let l:bin_folder = fnamemodify(syntastic#util#findFileInParent('package.json', l:current_folder), ':h')
-    let l:bin_folder = l:bin_folder . '/node_modules/.bin/'
-    call CheckLinter(l:bin_folder . a:linter, a:linter)
-endfunction
-
-autocmd FileType javascript call SetupLinter('eslint')
-autocmd FileType css call SetupLinter('stylelint')
+let g:ale_lint_on_text_changed = 'never'
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_error = '×'
+let g:ale_sign_warning = '-'
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'css': ['stylelint'],
+\}
 
 " ------------------------------------------------------------------------------
 
