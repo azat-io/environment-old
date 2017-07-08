@@ -23,6 +23,7 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'kien/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
+
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -38,6 +39,7 @@ let g:ctrlp_use_caching = 1
 "        up or down
 
 Plug 'easymotion/vim-easymotion'
+
 map ' <Plug>(easymotion-prefix)
 
 nmap `` <Plug>(easymotion-w)
@@ -58,6 +60,7 @@ map `h <Plug>(easymotion-linebackward)
 "        and Leader + cy to yank and comment
 
 Plug 'scrooloose/nerdcommenter'
+
 let g:NERDSpaceDelims = 1
 let g:NERDTrimTrailingWhitespace = 1
 noremap <c-_> :call NERDComment(0, "Toggle")<cr>
@@ -89,6 +92,7 @@ Plug 'jasonlong/vim-textobj-css'
 "        down
 
 Plug 'matze/vim-move'
+
 let g:move_key_modifier = 'C'
 
 " ------------------------------------------------------------------------------
@@ -113,13 +117,18 @@ Plug 'tpope/vim-surround'
 " Usage: Type :JsDoc or press Ctrl + l to insert JsDoc
 
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
+
 nmap <silent> <C-l> <Plug>(jsdoc)
 
 " ------------------------------------------------------------------------------
 
-" Clever F
+" Plugin: Clever F
+"
+" About: Extends f, F, t and T mappings for more convenience
+" Usage: Works automatically
 
 Plug 'rhysd/clever-f.vim'
+
 let g:clever_f_ignore_case = 1
 
 " ------------------------------------------------------------------------------
@@ -137,11 +146,12 @@ Plug 'moll/vim-node'
 "
 " About: Allows to use code snippets
 " Usage: Snippets are stored in the "snippets" directory. For using snippets
-" enter snippet and press Tab button
+"        enter snippet and press Tab button
 
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'garbas/vim-snipmate'
 Plug 'tomtom/tlib_vim'
+
 let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['javascript'] = 'javascript,jsx,es6'
@@ -161,7 +171,19 @@ Plug 'alvan/vim-closetag'
 "
 " About: Provide to using text objects for entire buffer
 " Usage: Provides two text object: ae - entire content of the current buffer,
-" ie - the same as ae but without including leading and trailing empty lines.
-" For example dae - remove all buffer content
+"        ie - the same as ae but without including leading and trailing empty
+"        lines. For example dae - remove all buffer content
 
 Plug 'kana/vim-textobj-entire'
+
+" ------------------------------------------------------------------------------
+
+" Plugin: Expand Region
+"
+" About: Visually select increasingly larger regions of text
+" Usage: Press Shift + j or Shift + k to select larger or lower text blocks
+
+Plug 'terryma/vim-expand-region'
+
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink)
