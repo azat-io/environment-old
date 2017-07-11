@@ -164,6 +164,7 @@ let g:snipMate.scope_aliases['javascript'] = 'javascript,jsx,es6'
 " Usage: Works automatically
 
 Plug 'alvan/vim-closetag'
+let g:closetag_filenames = '*.html,*.xhtml,*.php,*.js,*.jsx'
 
 " ------------------------------------------------------------------------------
 
