@@ -188,3 +188,14 @@ Plug 'terryma/vim-expand-region'
 
 map K <Plug>(expand_region_expand)
 map J <Plug>(expand_region_shrink)
+
+" ------------------------------------------------------------------------------
+
+" Plugin: Ack
+"
+" About: Searching plain-text data
+" Usage: :Ack [options] {pattern} [{directories}] in command line mode. If you
+"        don't want to jump to the first result automatically use :Ack!.
+
+Plug 'mileszs/ack.vim'
+let g:ackprg = '/usr/bin/vendor_perl/ack -s -H --nogroup --column'
