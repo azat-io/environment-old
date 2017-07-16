@@ -38,8 +38,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
+alias ack="/usr/bin/vendor_perl/ack"
 alias d="cd ~/Dev/"
 alias e="vim"
+alias :q="exit"
 
 # Fonts
 
