@@ -10,18 +10,23 @@ Plug 'digitaltoad/vim-pug', { 'for': ['pug', 'jade'] }
 autocmd bufnewfile,bufread *.pug set filetype=pug
 autocmd bufnewfile,bufread *.jade set filetype=pug
 
+Plug 'joukevandermaas/vim-ember-hbs', { 'for': ['handlebars', 'hbs'] }
+
 Plug 'plasticboy/vim-markdown', { 'for': 'md' }
 
 " Stylesheets
 
-Plug 'hail2u/vim-css3-syntax'
+Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'css' }
 Plug 'hhsnopek/vim-sugarss'
 
 " Scripts
 
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'fleischie/vim-styled-components', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript.jsx' }
+let g:javascript_plugin_jsdoc = 1
+
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+let g:jsx_ext_required = 0
 
 " CoffeeScript
 
