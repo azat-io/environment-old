@@ -5,20 +5,22 @@
 " Markup
 
 Plug 'othree/html5.vim', { 'for': 'html' }
-
+Plug 'plasticboy/vim-markdown', { 'for': 'md' }
+Plug 'joukevandermaas/vim-ember-hbs', { 'for': ['handlebars', 'hbs'] }
 Plug 'digitaltoad/vim-pug', { 'for': ['pug', 'jade'] }
+
 autocmd bufnewfile,bufread *.pug set filetype=pug
 autocmd bufnewfile,bufread *.jade set filetype=pug
-
-Plug 'joukevandermaas/vim-ember-hbs', { 'for': ['handlebars', 'hbs'] }
-
-Plug 'plasticboy/vim-markdown', { 'for': 'md' }
 
 " Stylesheets
 
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-Plug 'cakebaker/scss-syntax.vim', { 'for': 'css' }
-Plug 'hhsnopek/vim-sugarss'
+
+augroup VimCSS3Syntax
+  autocmd!
+
+  autocmd FileType css setlocal iskeyword+=-
+augroup END
 
 " Scripts
 
