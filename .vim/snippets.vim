@@ -71,6 +71,9 @@ noremap <c-_> :call NERDComment(0, "Toggle")<cr>
 
 Plug 'terryma/vim-multiple-cursors'
 
+" About: Allow to use multiple selection feature
+" Usage: 
+
 " ------------------------------------------------------------------------------
 
 " Plugin: TextObj CSS
@@ -199,3 +202,12 @@ map J <Plug>(expand_region_shrink)
 
 Plug 'mileszs/ack.vim'
 let g:ackprg = '/usr/bin/vendor_perl/ack -s -H --nogroup --column'
+
+" ------------------------------------------------------------------------------
+
+" Plugin: Repeat
+"
+" About: Enable repeating supported plugin maps with "."
+" Usage: Works automatically
+
+Plug 'tpope/vim-repeat'
