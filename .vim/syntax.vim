@@ -39,6 +39,10 @@ au BufRead,BufNewFile *.cson set filetype=coffee
 
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
+" Vue
+
+Plug 'posva/vim-vue', { 'for': 'vue' }
+
 " YAML
 
 Plug 'stephpy/vim-yaml'
