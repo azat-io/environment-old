@@ -18,6 +18,9 @@ snippet fe
 	    ${2:code}
 	})
 
+snippet d
+	const ${1:name} = document.querySelector('.${2:selector}')
+
 snippet if
 	if (${1:condition}) {
 	    ${2:code}
@@ -32,6 +35,11 @@ snippet ifel
 
 snippet im
 	import ${1:variable} from '${2:package}'
+
+snippet jest
+	test('${1:description}', () => {
+	    expect(${2:functionName}(${3:recived})).toEqual(${4:expected})
+	})
 
 snippet log
 	console.log(${1:code})
