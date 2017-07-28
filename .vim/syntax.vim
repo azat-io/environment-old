@@ -42,6 +42,7 @@ Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 " Vue
 
 Plug 'posva/vim-vue', { 'for': 'vue' }
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 " YAML
 
