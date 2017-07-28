@@ -4,10 +4,6 @@
 
 " Syntax theme
 
-set t_Co=256
-set t_AB=^[[48;5;%dm
-set t_AF=^[[38;5;%dm]]]]
-
 highlight Normal ctermbg=black ctermfg=white
 set background=dark
 
@@ -112,7 +108,7 @@ nmap <silent> <C-x> <Plug>(ale_next_wrap)
 
 let g:ale_lint_on_text_changed = 'never'
 let g:airline#extensions#ale#enabled = 1
-let g:ale_sign_error = '×'
+let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '-'
 let g:ale_linters = {
 \   'javascript': ['eslint'],
@@ -125,7 +121,7 @@ let g:ale_linters = {
 "
 " About: Zoom in/out of windows
 " Usage: Press Ctrl + w, o and the current window zooms into a full screen, and
-"        press Ctrl + w, o again to the previous set of windows is restored
+"        press Ctrl + w, o again to the previous set of windows is restored 
 
 Plug 'vim-scripts/ZoomWin'
 
@@ -147,7 +143,7 @@ Plug 'simeji/winresizer'
 
 Plug 'Shougo/vimproc.vim'
 Plug 'Shougo/vimshell.vim'
-
+ 
 " ------------------------------------------------------------------------------
 
 " Plugin: Match tag Always
@@ -157,3 +153,16 @@ Plug 'Shougo/vimshell.vim'
 
 Plug 'Valloric/MatchTagAlways'
 let g:mta_filetypes = { 'javascript': 1, 'html' : 1, 'xhtml' : 1, 'xml' : 1 }
+
+" ------------------------------------------------------------------------------
+
+" Plugin: Relative number current window
+"
+" About: Only show relative numbers in the currently active window
+" Usage: Works automatically
+
+Plug 'vim-scripts/RelativeNumberCurrentWindow'
+set relativenumber
+augroup CLNRSet
+    autocmd! ColorScheme * hi CursorLineNR cterm=bold ctermbg=NONE
+augroup END
