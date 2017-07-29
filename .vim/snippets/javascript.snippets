@@ -1,3 +1,11 @@
+snippet ae
+	${1:document}.addEventListener('${2:event}', () => {
+	    ${3:// body}
+	})
+
+snippet d
+	const ${1:name} = document.querySelector('.${2:selector}')
+
 snippet ex
 	export default function ${1:functionName} (${2:args}) {
 	    ${3:code}
@@ -10,27 +18,34 @@ snippet f
 
 snippet for
 	for (let i = 0, max = ${1:arr}.length; i < max; i++) {
-	    ${2:code}
+	    ${2:// body}
 	}
 
 snippet fe
 	${1:arr}.forEach(i => {
-	    ${2:code}
+	    ${2:// body}
 	})
 
-snippet d
-	const ${1:name} = document.querySelector('.${2:selector}')
+snippet fi
+	for (${1:prop} in ${2:obj}) {
+	    if (${2:obj}.hasOwnProperty(${1:prop})) {
+	        ${0:// body}
+	    }
+	}
+
+snippet gi
+	${1:document}.getElementById('${2:id}')
 
 snippet if
 	if (${1:condition}) {
-	    ${2:code}
+	    ${2:// body}
 	}
 
 snippet ifel
 	if (${1:condition}) {
-	    ${2:code}
+	    ${2:// body}
 	} else {
-	    ${3:code}
+	    ${3:// body}
 	}
 
 snippet im
@@ -40,6 +55,12 @@ snippet jest
 	test('${1:description}', () => {
 	    expect(${2:functionName}(${3:recived})).toEqual(${4:expected})
 	})
+
+snippet jp
+	JSON.parse(${1:obj})
+
+snippet js
+	JSON.stringify(${1:obj})
 
 snippet log
 	console.log(${1:code})
@@ -67,6 +88,16 @@ snippet rc
 
 snippet req
 	const ${1:variable} = require('${2:package}')
+
+snippet si
+	setInterval(() => {
+	    ${1:// body}
+	}, ${2:delay});
+
+snippet st
+	setTimeout(() => {
+	    ${1:// body}
+	}, ${2:delay});
 
 snippet us
 	'use strict'
