@@ -6,6 +6,9 @@ snippet ae
 snippet d
 	const ${1:name} = document.querySelector('.${2:selector}')
 
+snippet err
+	console.error(${1:body})
+
 snippet ex
 	export default function ${1:functionName} (${2:args}) {
 	    ${3:code}
@@ -29,7 +32,7 @@ snippet fe
 snippet fi
 	for (${1:prop} in ${2:obj}) {
 	    if (${2:obj}.hasOwnProperty(${1:prop})) {
-	        ${0:// body}
+	        ${3:// body}
 	    }
 	}
 
@@ -63,7 +66,7 @@ snippet js
 	JSON.stringify(${1:obj})
 
 snippet log
-	console.log(${1:code})
+	console.log(${1:body})
 
 snippet map
 	${1:arr}.map(i => {
@@ -98,6 +101,13 @@ snippet st
 	setTimeout(() => {
 	    ${1:// body}
 	}, ${2:delay});
+
+snippet try
+	try {
+	    ${1:// body}
+	} catch (error) {
+	    console.log(error)
+	}
 
 snippet us
 	'use strict'
