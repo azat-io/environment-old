@@ -211,3 +211,12 @@ let g:ackprg = '/usr/bin/vendor_perl/ack -s -H --nogroup --column'
 " Usage: Works automatically
 
 Plug 'tpope/vim-repeat'
+
+" ------------------------------------------------------------------------------
+
+" Plugin: SuperTab
+"
+" About: Allows you to use <Tab> for all your insert completion needs
+" Usage: Works automatically
+
+Plug 'ervandew/supertab'
