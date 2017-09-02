@@ -102,6 +102,8 @@ Plug 'w0rp/ale'
 
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
+highlight! link ALEErrorSign GruvboxRedSign
+highlight! link ALEWarningSign GruvboxYellowSign
 
 nmap <silent> <C-z> <Plug>(ale_previous_wrap)
 nmap <silent> <C-x> <Plug>(ale_next_wrap)

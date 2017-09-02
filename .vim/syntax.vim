@@ -6,7 +6,6 @@
 
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'plasticboy/vim-markdown', { 'for': 'md' }
-Plug 'joukevandermaas/vim-ember-hbs', { 'for': ['handlebars', 'hbs'] }
 Plug 'digitaltoad/vim-pug', { 'for': ['pug', 'jade'] }
 
 autocmd bufnewfile,bufread *.pug set filetype=pug
