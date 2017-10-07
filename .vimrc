@@ -103,6 +103,10 @@ else
     set backupdir+=.
 endif
 
+" Double Space to Find and Replace
+
+nmap <Space><Space> :%s/\<<C-r>=expand("<cword>")<CR>\>/
+
 " Swap files
 
 set noswapfile
