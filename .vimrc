@@ -67,10 +67,15 @@ inoremap <Up> <C-o>gk
 
 nnoremap <BS> X
 
-" Split
+" Split and switchin between opened windows
 
 noremap <Leader>s <C-u>:split<CR>
 noremap <Leader>v <C-u>:vsplit<CR>
+
+nnoremap <expr><silent> \| !v:count ? "<C-W>v<C-W><Right>" : '\|'
+nnoremap <expr><silent> _ !v:count ? "<C-W>s<C-W><Down>"  : '_'
+nnoremap <Tab> <C-W>w
+nnoremap <S-Tab> <C-W>W
 
 " Moving in insert mode
 
