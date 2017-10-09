@@ -116,6 +116,10 @@ set noswapfile
 set list
 set listchars=tab:▸\ ,eol:¬
 
+" Let terminal resize scale the internal windows
+
+autocmd VimResized * :wincmd =
+
 " Spacing between windows using Ctrl + \"hjkl\"
 
 map silent <C-h> :call WinMove('h')<CR>
