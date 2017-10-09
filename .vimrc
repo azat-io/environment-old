@@ -1,11 +1,11 @@
-"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄
-"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄
-"  ███    ███ ███▌ ███   ███   ███
-"  ███    ███ ███▌ ███   ███   ███
-"  ███    ███ ███▌ ███   ███   ███
-"  ███    ███ ███  ███   ███   ███
-"  ███    ███ ███  ███   ███   ███
-"   ▀██████▀  █▀    ▀█   ███   █▀
+"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄   
+"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄ 
+"  ███    ███ ███▌ ███   ███   ███ 
+"  ███    ███ ███▌ ███   ███   ███ 
+"  ███    ███ ███▌ ███   ███   ███ 
+"  ███    ███ ███  ███   ███   ███ 
+"  ███    ███ ███  ███   ███   ███ 
+"   ▀██████▀  █▀    ▀█   ███   █▀  
 "
 " Author: Azat S.
 " Twitter: @azat_io
@@ -21,7 +21,7 @@ set number                              " show line numbers
 set nocompatible                        " vim is not vi
 
 syntax on                               " syntax highlighting
-set showmatch                           " highlight the matching bracket
+set showmatch                           " highlight the matching bracket 
 set iskeyword-=_                        " make underscore as a word boundary
 
 " Search
@@ -126,6 +126,13 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <LT>gv
 vnoremap < <gv
 vnoremap > >gv
+
+" Undo changes even after exiting file
+
+set undofile                            " Save undo's after file closes
+set undodir=$HOME/.vim/undo             " where to save undo histories
+set undolevels=1000                     " How many undos
+set undoreload=10000                    " number of lines to save for undo
 
 " Spacing between windows using Ctrl + \"hjkl\"
 
