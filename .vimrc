@@ -1,11 +1,11 @@
-"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄   
-"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄ 
-"  ███    ███ ███▌ ███   ███   ███ 
-"  ███    ███ ███▌ ███   ███   ███ 
-"  ███    ███ ███▌ ███   ███   ███ 
-"  ███    ███ ███  ███   ███   ███ 
-"  ███    ███ ███  ███   ███   ███ 
-"   ▀██████▀  █▀    ▀█   ███   █▀  
+"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄
+"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄
+"  ███    ███ ███▌ ███   ███   ███
+"  ███    ███ ███▌ ███   ███   ███
+"  ███    ███ ███▌ ███   ███   ███
+"  ███    ███ ███  ███   ███   ███
+"  ███    ███ ███  ███   ███   ███
+"   ▀██████▀  █▀    ▀█   ███   █▀
 "
 " Author: Azat S.
 " Twitter: @azat_io
@@ -21,7 +21,7 @@ set number                              " show line numbers
 set nocompatible                        " vim is not vi
 
 syntax on                               " syntax highlighting
-set showmatch                           " highlight the matching bracket 
+set showmatch                           " highlight the matching bracket
 set iskeyword-=_                        " make underscore as a word boundary
 
 " Search
@@ -119,6 +119,13 @@ set listchars=tab:▸\ ,eol:¬
 " Let terminal resize scale the internal windows
 
 autocmd VimResized * :wincmd =
+
+" Reselect visual block after indenting
+
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <LT>gv
+vnoremap < <gv
+vnoremap > >gv
 
 " Spacing between windows using Ctrl + \"hjkl\"
 
