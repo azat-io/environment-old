@@ -64,6 +64,7 @@ let NERDTreeShowHidden=1
 let mapleader=","
 nmap <C-\> :NERDTreeFind<CR>
 nmap <silent> <leader><leader> :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeFind<CR>
 
 " ------------------------------------------------------------------------------
 
