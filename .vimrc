@@ -120,13 +120,6 @@ set listchars=tab:▸\ ,eol:¬
 
 autocmd VimResized * :wincmd =
 
-" Reselect visual block after indenting
-
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <LT>gv
-vnoremap < <gv
-vnoremap > >gv
-
 " Undo changes even after exiting file
 
 set undofile                            " Save undo's after file closes
