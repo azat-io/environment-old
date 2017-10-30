@@ -1,14 +1,13 @@
-"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄   
-"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄ 
-"  ███    ███ ███▌ ███   ███   ███ 
-"  ███    ███ ███▌ ███   ███   ███ 
-"  ███    ███ ███▌ ███   ███   ███ 
-"  ███    ███ ███  ███   ███   ███ 
-"  ███    ███ ███  ███   ███   ███ 
-"   ▀██████▀  █▀    ▀█   ███   █▀  
+"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄
+"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄
+"  ███    ███ ███▌ ███   ███   ███
+"  ███    ███ ███▌ ███   ███   ███
+"  ███    ███ ███▌ ███   ███   ███
+"  ███    ███ ███  ███   ███   ███
+"  ███    ███ ███  ███   ███   ███
+"   ▀██████▀  █▀    ▀█   ███   █▀
 "
 " Author: Azat S.
-" Twitter: @azat_io
 " Source: https://github.com/azat-io/enviorenment
 
 " ==========================================
@@ -21,7 +20,7 @@ set number                              " show line numbers
 set nocompatible                        " vim is not vi
 
 syntax on                               " syntax highlighting
-set showmatch                           " highlight the matching bracket 
+set showmatch                           " highlight the matching bracket
 set iskeyword-=_                        " make underscore as a word boundary
 
 " Search
