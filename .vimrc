@@ -1,11 +1,11 @@
-"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄
-"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄
-"  ███    ███ ███▌ ███   ███   ███
-"  ███    ███ ███▌ ███   ███   ███
-"  ███    ███ ███▌ ███   ███   ███
-"  ███    ███ ███  ███   ███   ███
-"  ███    ███ ███  ███   ███   ███
-"   ▀██████▀  █▀    ▀█   ███   █▀
+"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄   
+"  ███    ███ ███  ▄██▀▀▀███▀▀▀██▄ 
+"  ███    ███ ███▌ ███   ███   ███ 
+"  ███    ███ ███▌ ███   ███   ███ 
+"  ███    ███ ███▌ ███   ███   ███ 
+"  ███    ███ ███  ███   ███   ███ 
+"  ███    ███ ███  ███   ███   ███ 
+"   ▀██████▀  █▀    ▀█   ███   █▀  
 "
 " Author: Azat S.
 " Source: https://github.com/azat-io/enviorenment
@@ -20,7 +20,7 @@ set number                              " show line numbers
 set nocompatible                        " vim is not vi
 
 syntax on                               " syntax highlighting
-set showmatch                           " highlight the matching bracket
+set showmatch                           " highlight the matching bracket 
 set iskeyword-=_                        " make underscore as a word boundary
 
 " Search
@@ -57,10 +57,6 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
-
-" Select all
-
-" map <C-S-a> <esc>ggVG<CR>
 
 " Backspace to delete the previous letter in normal mode
 
@@ -125,6 +121,11 @@ set undofile                            " Save undo's after file closes
 set undodir=$HOME/.vim/undo             " where to save undo histories
 set undolevels=1000                     " How many undos
 set undoreload=10000                    " number of lines to save for undo
+
+" Move a cursor per paragraph forwards or backwards
+
+map <S-j> }
+map <S-k> {
 
 " Spacing between windows using Ctrl + \"hjkl\"
 

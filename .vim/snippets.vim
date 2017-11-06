@@ -182,18 +182,6 @@ Plug 'kana/vim-textobj-entire'
 
 " ------------------------------------------------------------------------------
 
-" Plugin: Expand Region
-"
-" About: Visually select increasingly larger regions of text
-" Usage: Press Shift + j or Shift + k to select larger or lower text blocks
-
-Plug 'terryma/vim-expand-region'
-
-map K <Plug>(expand_region_expand)
-map J <Plug>(expand_region_shrink)
-
-" ------------------------------------------------------------------------------
-
 " Plugin: Ack
 "
 " About: Searching plain-text data
