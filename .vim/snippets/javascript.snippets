@@ -1,6 +1,7 @@
+
 snippet ae
 	${1:document}.addEventListener('${2:event}', () => {
-	    ${3:// body}
+	  ${3:// body}
 	})
 
 snippet d
@@ -10,30 +11,28 @@ snippet err
 	console.error(${1:body})
 
 snippet ex
-	export default function ${1:functionName} (${2:args}) {
-	    ${3:code}
-	}
+	export default ${1}
 
 snippet f
 	function ${1:functionName} (${2:args}) {
-	    ${3:code}
+	  ${3:code}
 	}
 
 snippet for
 	for (let i = 0, max = ${1:arr}.length; i < max; i++) {
-	    ${2:// body}
+	  ${2:// body}
 	}
 
 snippet fe
 	${1:arr}.forEach(i => {
-	    ${2:// body}
+	  ${2:// body}
 	})
 
 snippet fi
 	for (${1:prop} in ${2:obj}) {
-	    if (${2:obj}.hasOwnProperty(${1:prop})) {
-	        ${3:// body}
-	    }
+	  if (${2:obj}.hasOwnProperty(${1:prop})) {
+	    ${3:// body}
+	  }
 	}
 
 snippet gi
@@ -41,14 +40,14 @@ snippet gi
 
 snippet if
 	if (${1:condition}) {
-	    ${2:// body}
+	  ${2:// body}
 	}
 
 snippet ifel
 	if (${1:condition}) {
-	    ${2:// body}
+	  ${2:// body}
 	} else {
-	    ${3:// body}
+	  ${3:// body}
 	}
 
 snippet im
@@ -56,7 +55,7 @@ snippet im
 
 snippet jest
 	test('${1:description}', () => {
-	    expect(${2:functionName}(${3:recived})).toEqual(${4:expected})
+	  expect(${2:functionName}(${3:recived})).toEqual(${4:expected})
 	})
 
 snippet jp
@@ -70,23 +69,23 @@ snippet log
 
 snippet map
 	${1:arr}.map(i => {
-	    ${2:code}
+	  ${2:code}
 	})
 
 snippet r
-	return ${1:code}
+	return ${1}
 
 snippet rc
 	import React, { Component } from 'react'
 
 	export default class ${1:ComponentName} extends Component {
-	    render () {
-	        return (
-	            <${2:div}>
-	                <${3:code}>
-	            </$2>
-	        )
-	    }
+	  render () {
+	    return (
+	      <${2:div}>
+	        <${3:code}>
+	      </$2>
+	    )
+	  }
 	}
 
 snippet req
@@ -94,19 +93,19 @@ snippet req
 
 snippet si
 	setInterval(() => {
-	    ${1:// body}
-	}, ${2:delay});
+	  ${1}
+	}, ${2:1000});
 
 snippet st
 	setTimeout(() => {
-	    ${1:// body}
-	}, ${2:delay});
+	    ${1:}
+	}, ${2:1000});
 
 snippet try
 	try {
-	    ${1:// body}
+	  ${1}
 	} catch (error) {
-	    console.log(error)
+	  console.log(error)
 	}
 
 snippet us
