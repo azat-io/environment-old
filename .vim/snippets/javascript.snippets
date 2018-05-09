@@ -1,3 +1,48 @@
+snippet _A
+	import assign from 'lodash/assign'
+
+snippet _a
+	assign(${1:obj}, {${2}})
+
+snippet _F
+	import forEach from 'lodash/forEach'
+
+snippet _f
+	forEach(${1:arr}, (item) => {
+	  ${2}
+	})
+
+snippet _IA
+	import isArray from 'lodash/isArray'
+
+snippet _ia
+	isArray(${1})
+
+snippet _IE
+	import isEmpty from 'lodash/isEmpty'
+
+snippet _ie
+	isEmpty(${1})
+
+snippet _IN
+	import isNil from 'lodash/isNil'
+
+snippet _in
+	isNil(${1})
+
+snippet _IU
+	import isUndefined from 'lodash/isUndefined'
+
+snippet _iu
+	isUndefined(${1})
+
+snippet _M
+	import map from 'lodash/map'
+
+snippet _m
+	map(${1:arr}, (item) => {
+	  ${2}
+	})
 
 snippet ae
 	${1:document}.addEventListener('${2:event}', () => {
