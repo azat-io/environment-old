@@ -18,29 +18,14 @@ highlight! link jsonString GruvboxYellow
 
 " ------------------------------------------------------------------------------
 
-" Plugin: AirLine
+" Plugin: LightLine
 "
 " About: Show informative status line
 " Usage: Works automatically
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-bufferline'
-
-set laststatus=2                        " enable airline on open
-set noshowmode                          " don't show mode as airline already does
-
-let g:airline_powerline_fonts = 2
-let g:airline_theme='gruvbox'
-
-if ! has('gui_running')
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=1000
-    augroup END
-endif
+Plug 'itchyny/lightline.vim'
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
 
 " ------------------------------------------------------------------------------
 
@@ -124,7 +109,7 @@ let g:ale_linters = {
 "
 " About: Zoom in/out of windows
 " Usage: Press Ctrl + w, o and the current window zooms into a full screen, and
-"        press Ctrl + w, o again to the previous set of windows is restored 
+"        press Ctrl + w, o again to the previous set of windows is restored
 
 Plug 'vim-scripts/ZoomWin'
 
@@ -146,7 +131,7 @@ Plug 'simeji/winresizer'
 
 Plug 'Shougo/vimproc.vim'
 Plug 'Shougo/vimshell.vim'
- 
+
 " ------------------------------------------------------------------------------
 
 " Plugin: Match tag Always
