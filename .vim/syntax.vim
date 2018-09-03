@@ -5,11 +5,13 @@
 " Markup
 
 Plug 'othree/html5.vim', { 'for': 'html' }
-Plug 'plasticboy/vim-markdown', { 'for': 'md' }
+Plug 'tpope/vim-markdown', { 'for': 'md' }
 Plug 'digitaltoad/vim-pug', { 'for': ['pug', 'jade'] }
 
 autocmd bufnewfile,bufread *.pug set filetype=pug
 autocmd bufnewfile,bufread *.jade set filetype=pug
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['html', 'css', 'js=javascript.jsx', 'bash=sh']
 
 " Stylesheets
 
@@ -46,3 +48,6 @@ autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 " YAML
 
 Plug 'stephpy/vim-yaml'
+
+" GraphQL
+Plug 'jparise/vim-graphql'
