@@ -50,4 +50,9 @@ autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 Plug 'stephpy/vim-yaml'
 
 " GraphQL
+
 Plug 'jparise/vim-graphql'
+
+" Styled Components
+
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
