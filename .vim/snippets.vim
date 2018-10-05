@@ -72,7 +72,7 @@ noremap <c-_> :call NERDComment(0, "Toggle")<cr>
 Plug 'terryma/vim-multiple-cursors'
 
 " About: Allow to use multiple selection feature
-" Usage: 
+" Usage:
 
 " ------------------------------------------------------------------------------
 
@@ -168,6 +168,7 @@ let g:snipMate.scope_aliases['javascript'] = 'javascript,jsx,es6'
 
 Plug 'alvan/vim-closetag'
 let g:closetag_filenames = '*.html,*.xhtml,*.php,*.js,*.jsx'
+let g:closetag_emptyTags_caseSensitive = 1
 
 " ------------------------------------------------------------------------------
 
