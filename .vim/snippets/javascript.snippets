@@ -12,6 +12,12 @@ snippet _f
 	  ${2}
 	})
 
+snippet _G
+	import get from 'lodash/get'
+
+snippet _g
+	get(${1:object}, '${2}')
+
 snippet _IA
 	import isArray from 'lodash/isArray'
 
@@ -48,6 +54,9 @@ snippet ae
 	${1:document}.addEventListener('${2:event}', () => {
 	  ${3:// body}
 	})
+
+snippet c
+	console.log
 
 snippet d
 	const ${1:name} = document.querySelector('.${2:selector}')
@@ -110,12 +119,43 @@ snippet js
 	JSON.stringify(${1:obj})
 
 snippet log
-	console.log(${1})
+	console.log('${1:props}', $1);
+
+snippet lp
+	console.log('props', props)
 
 snippet map
 	${1:arr}.map(i => {
 	  ${2:code}
 	})
+
+snippet PT
+	import PropTypes from 'prop-types'
+
+snippet R
+	import React from 'react'
+
+snippet RC
+	import React from 'react'
+	import PropTypes from 'prop-types'
+	import {
+	  compose,
+	  withProps,
+	} from 'recompose'
+
+	const ${1:ComponentName} = props => (
+	  <${2:div}>
+	  </$2>
+	)
+
+	${1}.propTypes = {
+	}
+
+	export default compose(
+	  withProps(props => {
+	    console.log(props)
+	  }),
+	)(${1})
 
 snippet r
 	return ${1}
@@ -136,6 +176,9 @@ snippet rc
 snippet req
 	const ${1:variable} = require('${2:package}')
 
+snippet S
+	import styles from './style.css'
+
 snippet si
 	setInterval(() => {
 	  ${1}
@@ -155,3 +198,9 @@ snippet try
 
 snippet us
 	'use strict'
+
+
+snippet wp
+	withProps((props) => {
+	  console.log('props', props)
+	}),
