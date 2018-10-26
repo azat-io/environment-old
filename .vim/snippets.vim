@@ -209,3 +209,15 @@ Plug 'tpope/vim-repeat'
 " Usage: Works automatically
 
 Plug 'ervandew/supertab'
+
+" ------------------------------------------------------------------------------
+
+" Plugin: SortMotion
+"
+" About: This plugin provides the ability to sort in Vim using text objects and
+"        motions.
+" Usage: gs2j => Sort down two lines (current + 2 below); gsip => Sort the
+"        current paragraph; gsii => Sort the current indentation level (requires
+"        text-obj-indent plugin)
+
+Plug 'christoomey/vim-sort-motion'
