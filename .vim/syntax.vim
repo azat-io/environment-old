@@ -27,6 +27,7 @@ augroup END
 
 Plug 'pangloss/vim-javascript', { 'for': 'javascript.jsx' }
 let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
 
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 let g:jsx_ext_required = 0
