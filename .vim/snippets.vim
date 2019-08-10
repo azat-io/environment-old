@@ -5,6 +5,17 @@
 set wildmenu                            " Enable Wildmenu
 set wildmode=longest:full,full          " Configure Wildmenu"
 
+" Plugin: Sensible
+"
+" About: Set of defaults: backspace through anything in insert mode, start
+"        searching before pressing enter, always show at least one line
+"        above/below the cursor, autoload file changes, etc.
+" Usage: Works automatically
+
+Plug 'tpope/vim-sensible'
+
+" ------------------------------------------------------------------------------
+
 " Plugin: AutoPairs
 "
 " About: Insert or delete brackets, parens, quotes in pair
@@ -158,6 +169,7 @@ Plug 'tomtom/tlib_vim'
 let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['javascript'] = 'javascript,jsx,es6'
+let g:snipMate.scope_aliases['css'] = 'css,scss,less'
 
 " ------------------------------------------------------------------------------
 
@@ -190,7 +202,7 @@ Plug 'kana/vim-textobj-entire'
 "        don't want to jump to the first result automatically use :Ack!.
 
 Plug 'mileszs/ack.vim'
-let g:ackprg = '/usr/bin/vendor_perl/ack -s -H --nogroup --column'
+let g:ackprg = 'ack -s -H --nogroup --column'
 
 " ------------------------------------------------------------------------------
 

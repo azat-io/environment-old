@@ -4,17 +4,23 @@
 
 " Syntax theme
 
-highlight Normal ctermbg=black ctermfg=white
+"highlight Normal ctermbg=black ctermfg=white
 set background=dark
 
 Plug 'morhetz/gruvbox'
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 
-highlight! link jsonKeyword GruvboxAqua
-highlight! link jsonQuote GruvboxAqua
-highlight! link jsonBraces GruvboxYellow
-highlight! link jsonString GruvboxYellow
+function! s:setColors()
+  if (&t_Co >= 256)
+    execute 'highlight jsonKeyword ctermfg=14'
+    execute 'highlight jsonQuote ctermfg=14'
+    execute 'highlight jsonBraces ctermfg=11'
+    execute 'highlight jsonString ctermfg=11'
+  endif
+endfunction
+
+autocmd ColorScheme * call s:setColors()
 
 " ------------------------------------------------------------------------------
 
@@ -50,6 +56,8 @@ let mapleader=","
 nmap <C-\> :NERDTreeFind<CR>
 nmap <silent> <leader><leader> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
+
+highlight! link NERDTreeFlags NERDTreeDir
 
 " ------------------------------------------------------------------------------
 
@@ -99,7 +107,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '-'
 let g:ale_linters = {
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint','jshint'],
 \   'css': ['stylelint'],
 \}
 
@@ -154,3 +162,13 @@ set relativenumber
 augroup CLNRSet
     autocmd! ColorScheme * hi CursorLineNR cterm=bold ctermbg=NONE
 augroup END
+
+" ------------------------------------------------------------------------------
+
+" Plugin: Rainbow
+"
+" About: Bracket pair colorizer
+" Usage: Works automatically
+
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1
