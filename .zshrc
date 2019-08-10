@@ -1,3 +1,4 @@
+
 #  ▄███████▄     ▄████████    ▄█    █▄
 # ██▀     ▄██   ███    ███   ███    ███
 #       ▄███▀   ███    █▀    ███    ███
@@ -38,9 +39,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
-alias ack="/usr/bin/vendor_perl/ack"
+# alias ack="/usr/bin/vendor_perl/ack"
 alias d="cd ~/Dev/"
 alias e="vim"
+alias ls="exa"
 alias :q="exit"
 
 # Fonts
@@ -49,4 +51,6 @@ if [[ -r /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]
     source /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
-. /etc/profile.d/vte.sh
+#. /etc/profile.d/vte.sh
+
+
