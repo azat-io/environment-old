@@ -43,6 +43,7 @@ alias ~="cd ~"
 alias d="cd ~/Dev/"
 alias e="vim"
 alias ls="exa"
+alias la="exa -la --git"
 alias :q="exit"
 
 # Fonts

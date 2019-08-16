@@ -57,3 +57,7 @@ Plug 'jparise/vim-graphql'
 " Styled Components
 
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+" Svelte
+
+Plug 'evanleck/vim-svelte', { 'for': 'svelte' }
