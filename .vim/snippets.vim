@@ -74,7 +74,8 @@ Plug 'scrooloose/nerdcommenter'
 
 let g:NERDSpaceDelims = 1
 let g:NERDTrimTrailingWhitespace = 1
-noremap <c-_> :call NERDComment(0, "Toggle")<cr>
+"noremap <c-/> :call NERDComment(0, "Toggle")<cr>
+noremap <C-_> :call NERDComment(0, "Toggle")<cr>
 
 " ------------------------------------------------------------------------------
 
@@ -233,3 +234,33 @@ Plug 'ervandew/supertab'
 "        text-obj-indent plugin)
 
 Plug 'christoomey/vim-sort-motion'
+
+" ------------------------------------------------------------------------------
+
+" Plugin: Prettier
+"
+" About: Format code
+" Usage: Works automatically
+
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ] }
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync

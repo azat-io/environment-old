@@ -4,7 +4,6 @@
 
 " Syntax theme
 
-"highlight Normal ctermbg=black ctermfg=white
 set background=dark
 
 Plug 'morhetz/gruvbox'
@@ -17,6 +16,25 @@ function! s:setColors()
     execute 'highlight jsonQuote ctermfg=14'
     execute 'highlight jsonBraces ctermfg=11'
     execute 'highlight jsonString ctermfg=11'
+
+    execute 'highlight clear SignColumn'
+
+    execute 'highlight clear ALEErrorSign'
+    execute 'highlight clear ALEWarningSign'
+    execute 'highlight ALEErrorSign ctermfg=9'
+    execute 'highlight ALEWarningSign ctermfg=3'
+
+    execute 'highlight clear SignifySignAdd'
+    execute 'highlight clear SignifySignChange'
+    execute 'highlight clear SignifySignDelete'
+    execute 'highlight clear SignifySignChangeDelete'
+    execute 'highlight clear SignifySignDeleteFirstLine'
+
+    execute 'highlight SignifySignAdd ctermfg=10'
+    execute 'highlight SignifySignChange ctermfg=14'
+    execute 'highlight SignifySignDelete ctermfg=9'
+    execute 'highlight SignifySignChangeDelete ctermfg=9'
+    execute 'highlight SignifySignDeleteFirstLine ctermfg=9'
   endif
 endfunction
 
@@ -94,10 +112,10 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 Plug 'w0rp/ale'
 
-highlight clear ALEErrorSign
-highlight clear ALEWarningSign
-highlight! link ALEErrorSign GruvboxRedSign
-highlight! link ALEWarningSign GruvboxYellowSign
+" highlight clear ALEErrorSign
+" highlight clear ALEWarningSign
+" highlight! link ALEErrorSign GruvboxGreenSign
+" highlight! link ALEWarningSign GruvboxYellowSign
 
 nmap <silent> <C-z> <Plug>(ale_previous_wrap)
 nmap <silent> <C-x> <Plug>(ale_next_wrap)
@@ -105,7 +123,7 @@ nmap <silent> <C-x> <Plug>(ale_next_wrap)
 let g:ale_lint_on_text_changed = 'never'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '-'
+let g:ale_sign_warning = '▵'
 let g:ale_linters = {
 \   'javascript': ['eslint','jshint'],
 \   'css': ['stylelint'],
@@ -172,3 +190,13 @@ augroup END
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
+
+" ------------------------------------------------------------------------------
+
+" Plugin: Signify
+"
+" About: Show a diff using Vim its sign column.
+" Usage: Works automatically
+
+Plug 'mhinz/vim-signify'
+let g:signify_sign_change = '-'
